@@ -28,22 +28,4 @@ public class Category {
 
     @OneToMany
     private List<Product> products;
-
-    @Column(name = "created_at")
-    @CreationTimestamp
-    private LocalDateTime createAt;
-
-    @Column(name = "updated_at")
-    @UpdateTimestamp
-    private LocalDateTime updatedAt;
-
-    @Column(name = "created_by")
-    private String createdBy;
-
-    @Column(name = "updated_by")
-    private String updatedBy;
-
-    @Column(nullable = false)
-    private Boolean deleted = false;
-
 }
