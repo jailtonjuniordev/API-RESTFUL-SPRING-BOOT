@@ -1,15 +1,13 @@
 package br.com.jjdev.APIREST.domain.category;
 
 import br.com.jjdev.APIREST.domain.product.Product;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -26,6 +24,7 @@ public class Category {
 
     private String name;
 
-    @OneToMany
+    @OneToMany(mappedBy = "category")
+    @JsonIgnoreProperties("category")
     private List<Product> products;
 }
