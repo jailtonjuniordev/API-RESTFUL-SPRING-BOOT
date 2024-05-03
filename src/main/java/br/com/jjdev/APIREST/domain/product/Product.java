@@ -1,5 +1,6 @@
-package br.com.jjdev.APIREST.domain.entity;
+package br.com.jjdev.APIREST.domain.product;
 
+import br.com.jjdev.APIREST.domain.category.Category;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "products")
 public class Product {
 
     @Id

@@ -1,5 +1,6 @@
-package br.com.jjdev.APIREST.domain.entity;
+package br.com.jjdev.APIREST.domain.category;
 
+import br.com.jjdev.APIREST.domain.product.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,6 +17,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "categories")
 public class Category {
 
     @Id
